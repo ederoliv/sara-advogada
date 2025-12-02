@@ -1,0 +1,256 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+ /* --- Variáveis de Cores --- */
+        :root {
+            --primary-red: #C60014;
+            --cream-bg: #FCF9F4;
+            --text-dark: #333333;
+        }
+
+        /* --- Reset Básico --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* --- Header / Navegação --- */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            padding: 20px 15%;
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+           width: 100px;
+           display: block;
+        }
+
+        /* Container da navegação */
+        nav {
+
+            margin-left: 100px; 
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-family: "Bebas Neue", sans-serif;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- Menu Hambúrguer (Escondido no Desktop) --- */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--text-dark);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 0 15%; /* Aumentado de 8% para 15% para alinhar com o header */
+            background-image: url('assets/background.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-name {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-quote {
+            font-style: italic;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 40px;
+            border-left: 3px solid var(--primary-red);
+            padding-left: 15px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(198, 0, 20, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            background-color: #a30010;
+        }
+
+        .hero-image-container {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid var(--primary-red);
+            padding: 5px;
+            background-color: white;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-red);
+            color: var(--cream-bg);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsividade (Mobile) --- */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%; /* Reduz a borda no celular */
+                justify-content: space-between; /* Volta a separar logo e menu no mobile */
+            }
+
+            /* Reseta a margem da navegação no mobile */
+            nav {
+                margin-left: 0; 
+            }
+
+            /* Mostra o ícone do hambúrguer */
+            .hamburger {
+                display: block;
+                z-index: 101; /* Fica acima do menu aberto */
+            }
+
+            /* Animação do Hamburger quando ativo */
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            /* Menu Escondido / Mobile Drawer */
+            nav ul {
+                position: fixed;
+                left: -100%; /* Começa escondido fora da tela */
+                top: 0;
+                flex-direction: column;
+                background-color: var(--cream-bg);
+                width: 100%;
+                height: 100vh; /* Altura total */
+                text-align: center;
+                transition: 0.3s;
+                padding-top: 100px; /* Espaço para não ficar em cima do logo */
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+
+            /* Quando a classe 'active' é adicionada via JS, o menu entra */
+            nav ul.active {
+                left: 0;
+            }
+
+            nav li {
+                margin: 20px 0;
+            }
+            
+            nav a {
+                font-size: 1.2rem; /* Links maiores no mobile */
+            }
+
+            /* Ajustes da Hero no Mobile */
+            .hero {
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+                padding: 120px 5% 40px 5%; /* Mais padding no topo por causa do menu fixed se necessário */
+                gap: 40px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-quote {
+                border-left: none;
+                padding-left: 0;
+            }
+
+            .hero-image-container {
+                width: 280px;
+                height: 280px;
+            }
+        }

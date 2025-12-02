@@ -34,21 +34,26 @@
         /* --- Header / Navegação --- */
         header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
-            background-color: transparent; /* Fundo transparente para mesclar com o hero */
-            position: absolute; /* Para ficar sobre o fundo do hero */
+            /* Alterado: Alinha tudo à esquerda no desktop para controlar a distância */
+            justify-content: flex-start; 
+            padding: 20px 15%; /* Aumentado de 8% para 15% (bordas maiores) */
+            background-color: transparent;
+            position: absolute;
             width: 100%;
             top: 0;
-            z-index: 10;
+            z-index: 100; /* Aumentei o z-index para garantir que fique sobre tudo */
         }
 
         .logo {
-            font-family: 'Great Vibes', cursive; /* Fonte manuscrita */
-            color: var(--primary-red);
-            font-size: 2rem;
-            text-decoration: none;
+           width: 100px;
+           display: block;
+        }
+
+        /* Container da navegação */
+        nav {
+            /* Adiciona o espaço de 100px solicitado ao lado da logo */
+            margin-left: 100px; 
         }
 
         nav ul {
@@ -61,7 +66,7 @@
             text-decoration: none;
             color: var(--text-dark);
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
@@ -71,16 +76,29 @@
             color: var(--primary-red);
         }
 
+        /* --- Menu Hambúrguer (Escondido no Desktop) --- */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--text-dark);
+        }
+
         /* --- Hero Section --- */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-height: 100vh; /* Ocupa a altura total da tela */
-            padding: 0 8%;
+            min-height: 100vh;
+            padding: 0 15%; /* Aumentado de 8% para 15% para alinhar com o header */
             
-            /* CONFIGURAÇÃO DO FUNDO ABSTRATO */
-            /* Substitua a URL abaixo pela sua imagem de linhas abstratas */
             background-image: url('assets/background.png'); 
             background-size: cover;
             background-position: center;
@@ -111,7 +129,7 @@
             font-size: 1rem;
             color: #555;
             margin-bottom: 40px;
-            border-left: 3px solid var(--primary-red); /* Detalhe opcional de design */
+            border-left: 3px solid var(--primary-red);
             padding-left: 15px;
         }
 
@@ -120,7 +138,7 @@
             background-color: var(--primary-red);
             color: #fff;
             padding: 15px 40px;
-            border-radius: 30px; /* Bordas bem arredondadas */
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
@@ -133,7 +151,6 @@
             background-color: #a30010;
         }
 
-        /* --- Imagem Circular --- */
         .hero-image-container {
             position: relative;
             width: 450px;
@@ -147,9 +164,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50%; /* Faz a imagem ficar redonda */
-            border: 8px solid var(--primary-red); /* Borda grossa vermelha */
-            padding: 5px; /* Espaço entre a foto e a borda */
+            border-radius: 50%;
+            border: 8px solid var(--primary-red);
+            padding: 5px;
             background-color: white;
         }
 
@@ -165,17 +182,66 @@
         /* --- Responsividade (Mobile) --- */
         @media (max-width: 768px) {
             header {
-                padding: 15px 5%;
-                flex-direction: column;
-                gap: 15px;
-                position: relative; /* No mobile, tira o absolute para não sobrepor */
+                padding: 20px 5%; /* Reduz a borda no celular */
+                justify-content: space-between; /* Volta a separar logo e menu no mobile */
             }
 
+            /* Reseta a margem da navegação no mobile */
+            nav {
+                margin-left: 0; 
+            }
+
+            /* Mostra o ícone do hambúrguer */
+            .hamburger {
+                display: block;
+                z-index: 101; /* Fica acima do menu aberto */
+            }
+
+            /* Animação do Hamburger quando ativo */
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            /* Menu Escondido / Mobile Drawer */
+            nav ul {
+                position: fixed;
+                left: -100%; /* Começa escondido fora da tela */
+                top: 0;
+                flex-direction: column;
+                background-color: var(--cream-bg);
+                width: 100%;
+                height: 100vh; /* Altura total */
+                text-align: center;
+                transition: 0.3s;
+                padding-top: 100px; /* Espaço para não ficar em cima do logo */
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+
+            /* Quando a classe 'active' é adicionada via JS, o menu entra */
+            nav ul.active {
+                left: 0;
+            }
+
+            nav li {
+                margin: 20px 0;
+            }
+            
+            nav a {
+                font-size: 1.2rem; /* Links maiores no mobile */
+            }
+
+            /* Ajustes da Hero no Mobile */
             .hero {
-                flex-direction: column-reverse; /* Imagem em cima, texto embaixo no mobile */
+                flex-direction: column-reverse;
                 justify-content: center;
                 text-align: center;
-                padding: 40px 5%;
+                padding: 120px 5% 40px 5%; /* Mais padding no topo por causa do menu fixed se necessário */
                 gap: 40px;
             }
 
@@ -202,15 +268,22 @@
 <body>
 
     <header>
-        <a href="#" class="logo">Sara Mayélli</a>
+        <img src="assets/logo.png" class="logo" alt="Logo Sara Mayelli"/>
+        
         <nav>
-            <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Experiência</a></li>
-                <li><a href="#">Depoimentos</a></li>
-                <li><a href="#">Contato</a></li>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Sobre</a></li>
+                <li><a href="#" class="nav-link">Experiência</a></li>
+                <li><a href="#" class="nav-link">Depoimentos</a></li>
+                <li><a href="#" class="nav-link">Contato</a></li>
             </ul>
         </nav>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
     <section class="hero">
@@ -230,6 +303,24 @@
     <footer>
         <p>&copy; 2024 Sara Mayélli. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        // Abre e fecha o menu ao clicar no hambúrguer
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Fecha o menu ao clicar em um link
+        navLinks.forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
 
 </body>
 </html>

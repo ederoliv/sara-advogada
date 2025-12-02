@@ -1,181 +1,235 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Mayélli - Advogada</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <title>Advogada Sara</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <style>
+        /* --- Variáveis de Cores --- */
+        :root {
+            --primary-red: #C60014;
+            --cream-bg: #FCF9F4;
+            --text-dark: #333333;
+        }
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div
-      class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
-      style='--select-button-svg: url(&apos;data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(99,117,136)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e&apos;); font-family: "Public Sans", "Noto Sans", sans-serif;'
-    >
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#111418]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
-            </div>
-            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">Advogada Sara</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Sobre</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Serviços</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Contato</a>
-            </div>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#8B5BE4] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Agende um atendimento</span>
-            </button>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKyWWT8hVzn5Jc4RDK_vfRvUd7Hu9gf8amL8IemCd13zb51FRpp1fOcrFstlqvF65FOjnQUFJyvW8ea31d3yku01YmM4HUISTJLjNO7Ezg12S-nAWUZsT9gKP7ozMICn9jYORLQag5qtnNfa3dcw-EIWKIztnJLSP6B8IIkuMd5GKmj1YEqNCs8T-pYQwGE1uXxjofTWa0ao6FCI49fkG_dxTTbq9HPo8JIla1dEF39aHWCbW5aOBozd0HZOLYWDnEoyVkfDBXPW5o");'
-                ></div>
-                <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
-                  <div class="flex flex-col gap-2 text-left">
-                    <h1
-                      class="text-[#111418] text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Expertise Jurídica em que Você Pode Confiar
-                    </h1>
-                    <h2 class="text-[#111418] text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Sara é uma advogada dedicada, especializada em direito civil, familiar e imobiliário. Com um compromisso com o sucesso do cliente, ela oferece soluções jurídicas personalizadas adaptadas às suas necessidades.
-                    </h2>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#8B5BE4] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate">Agende um atendimento</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Áreas de Especialização</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 items-center">
-                <div class="text-[#111418]" data-icon="Scales" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,160.57,133a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32A7.92,7.92,0,0,0,239.43,133ZM56,184c-7.53,0-22.76-3.61-23.93-14.64L56,109.54l23.93,59.82C78.76,180.39,63.53,184,56,184Zm144-32c-7.53,0-22.76-3.61-23.93-14.64L200,77.54l23.93,59.82C222.76,148.39,207.53,152,200,152Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#111418] text-base font-bold leading-tight">Direito Civil</h2>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 items-center">
-                <div class="text-[#111418]" data-icon="House" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#111418] text-base font-bold leading-tight">Direito Imobiliário</h2>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 items-center">
-                <div class="text-[#111418]" data-icon="Users" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#111418] text-base font-bold leading-tight">Direito familiar</h2>
-              </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact Information</h2>
-            <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dce0e5] py-5">
-                <p class="text-[#637588] text-sm font-normal leading-normal">Phone</p>
-                <p class="text-[#111418] text-sm font-normal leading-normal">(555) 123-4567</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dce0e5] py-5">
-                <p class="text-[#637588] text-sm font-normal leading-normal">Email</p>
-                <p class="text-[#111418] text-sm font-normal leading-normal">sara.lawyer@email.com</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dce0e5] py-5">
-                <p class="text-[#637588] text-sm font-normal leading-normal">Address</p>
-                <p class="text-[#111418] text-sm font-normal leading-normal">123 Main Street, Anytown, USA</p>
-              </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Schedule a Consultation</h2>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Your Name</p>
-                <input
-                  placeholder="Enter your name"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Email Address</p>
-                <input
-                  placeholder="Enter your email"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Phone Number</p>
-                <input
-                  placeholder="Enter your phone number"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Area of Law</p>
-                <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
-                >
-                  <option value="one">Select area of law</option>
-                  <option value="two">two</option>
-                  <option value="three">three</option>
-                </select>
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Brief Description of Your Case</p>
-                <textarea
-                  placeholder="Please provide a brief overview of your legal matter"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none min-h-36 placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
-                ></textarea>
-              </label>
-            </div>
-            <div class="flex px-4 py-3 justify-end">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Submit</span>
-              </button>
-            </div>
-          </div>
+        /* --- Reset Básico --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* --- Header / Navegação --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: transparent; /* Fundo transparente para mesclar com o hero */
+            position: absolute; /* Para ficar sobre o fundo do hero */
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Great Vibes', cursive; /* Fonte manuscrita */
+            color: var(--primary-red);
+            font-size: 2rem;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh; /* Ocupa a altura total da tela */
+            padding: 0 8%;
+            
+            /* CONFIGURAÇÃO DO FUNDO ABSTRATO */
+            /* Substitua a URL abaixo pela sua imagem de linhas abstratas */
+            background-image: url('assets/background.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-name {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-quote {
+            font-style: italic;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 40px;
+            border-left: 3px solid var(--primary-red); /* Detalhe opcional de design */
+            padding-left: 15px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px; /* Bordas bem arredondadas */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(198, 0, 20, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            background-color: #a30010;
+        }
+
+        /* --- Imagem Circular --- */
+        .hero-image-container {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Faz a imagem ficar redonda */
+            border: 8px solid var(--primary-red); /* Borda grossa vermelha */
+            padding: 5px; /* Espaço entre a foto e a borda */
+            background-color: white;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-red);
+            color: var(--cream-bg);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsividade (Mobile) --- */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 15px;
+                position: relative; /* No mobile, tira o absolute para não sobrepor */
+            }
+
+            .hero {
+                flex-direction: column-reverse; /* Imagem em cima, texto embaixo no mobile */
+                justify-content: center;
+                text-align: center;
+                padding: 40px 5%;
+                gap: 40px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-quote {
+                border-left: none;
+                padding-left: 0;
+            }
+
+            .hero-image-container {
+                width: 280px;
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Sara Mayélli</a>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Experiência</a></li>
+                <li><a href="#">Depoimentos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-name">Sara Mayélli</h2>
+            <h1 class="hero-title">Advogada de Família, Civil e Criminal.</h1>
+            <p class="hero-quote">"Justiça e direito são o fundamento do teu trono; graça e verdade te precedem."</p>
+            
+            <a href="#" class="btn-cta">Contratar</a>
         </div>
-      </div>
-    </div>
-  </body>
+
+        <div class="hero-image-container">
+            <img src="assets/profille-sara.jpg" alt="Sara Mayélli Advogada" class="hero-img">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sara Mayélli. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
 </html>

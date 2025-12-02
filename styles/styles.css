@@ -52,11 +52,10 @@
         }
 
         nav a {
-            font-family: "Bebas Neue", sans-serif;
             text-decoration: none;
             color: var(--text-dark);
-            font-size: 1.1rem;
-            font-weight: 400;
+            font-size: 1rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
@@ -88,7 +87,7 @@
             justify-content: space-between;
             min-height: 100vh;
             padding: 0 15%; /* Aumentado de 8% para 15% para alinhar com o header */
-            background-image: url('../assets/background2.png'); 
+            background-image: url('../assets/background-white.png'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

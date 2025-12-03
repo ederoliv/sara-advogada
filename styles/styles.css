@@ -243,7 +243,7 @@
 .experience {
     padding: 80px 15%;
     min-height: 100vh;
-    background-image: url('../assets/background-white.png');
+    background-image: url('../assets/background-red.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -256,7 +256,7 @@
 .section-title {
     font-family: "Bebas Neue", sans-serif;
     font-size: 3rem;
-    color: var(--primary-red);
+    color: var(--cream-bg);
     margin-bottom: 60px;
     text-align: center;
     letter-spacing: 2px;
@@ -280,7 +280,7 @@
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid var(--primary-red); /* Detalhe colorido no topo */
+    border-top: 5px solid #6A6C6E; /* Detalhe colorido no topo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -295,14 +295,14 @@
 /* Ícone dentro do Card */
 .icon-box {
     font-size: 2.5rem;
-    color: var(--primary-red);
+    color: var(#6a6c6e);
     margin-bottom: 20px;
 }
 
 .card h3 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 1.8rem;
-    color: var(--text-dark);
+    color: var(--primary-red);
     margin-bottom: 20px;
     letter-spacing: 1px;
 }

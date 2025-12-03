@@ -159,6 +159,86 @@
             background-color: white;
         }
 
+        /* --- About Section --- */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 15%;
+    /* Usa o background vermelho solicitado */
+    background-image: url('../assets/background-grey.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Ajusta a cor do texto para claro (cream-bg) para contrastar com o vermelho */
+    color: var(--cream-bg); 
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    /* Título em branco/creme */
+    color: var(--cream-bg); 
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-image-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Borda clara para combinar com o tema vermelho */
+    border: 8px solid var(--cream-bg); 
+    padding: 5px;
+    background-color: transparent;
+}
+
+/* --- Responsividade da Section About (Mobile) --- */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Empilha: Imagem em cima, Texto embaixo */
+        justify-content: center;
+        text-align: center;
+        padding: 80px 5%;
+        gap: 40px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+}
+
         /* --- Footer --- */
         footer {
             background-color: var(--text-dark);

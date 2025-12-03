@@ -127,7 +127,7 @@
             background-color: var(--primary-red);
             color: #fff;
             padding: 15px 60px;
-            border-radius: 20px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
@@ -408,6 +408,127 @@
     .project-text {
         font-size: 1rem;
         text-align: left; /* No mobile, justificado pode criar buracos, left é melhor */
+    }
+}
+
+/* --- Contact Section --- */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conjunto na tela */
+    gap: 80px; /* Espaço entre o logo e o texto */
+    min-height: 80vh;
+    padding: 0 15%;
+    background-image: url('../assets/background-white.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Joga o logo para perto do texto */
+}
+
+.contact-logo {
+    max-width: 350px; /* Controla o tamanho do logo */
+    width: 100%;
+    height: auto;
+    /* Opcional: Adiciona uma sombra suave no logo se ele for transparente */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+.contact-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o texto à esquerda */
+}
+
+.contact-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-item i {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    width: 30px; /* Garante alinhamento dos ícones */
+    text-align: center;
+}
+
+.info-item a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.info-item a:hover {
+    color: var(--primary-red);
+}
+
+/* Ajuste específico para o botão do WhatsApp */
+.btn-whatsapp {
+    margin-top: 20px;
+    align-self: flex-start; /* Garante que o botão não estique a largura toda */
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+/* --- Responsividade Contact Section (Mobile) --- */
+@media (max-width: 992px) {
+    .contact {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 5%;
+        gap: 40px;
+    }
+
+    .contact-logo-container {
+        justify-content: center;
+        order: 1; /* Garante ordem visual se necessário */
+    }
+
+    .contact-logo {
+        max-width: 200px; /* Logo menor no celular */
+    }
+
+    .contact-content {
+        align-items: center; /* Centraliza tudo no mobile */
+        order: 2;
+        width: 100%;
+    }
+
+    .info-item {
+        justify-content: center; /* Centraliza ícone e texto */
+        font-size: 1.1rem;
+    }
+
+    .btn-whatsapp {
+        align-self: center; /* Botão centralizado no mobile */
     }
 }
 

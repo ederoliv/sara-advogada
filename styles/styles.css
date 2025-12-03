@@ -355,9 +355,65 @@
     }
 }
 
+/* --- Project Section --- */
+.project-section {
+    padding: 100px 15%;
+    min-height: 80vh; /* Altura um pouco menor que as outras para foco no texto */
+    /* Define o fundo cinza. Fallback #f4f4f4 caso a imagem não carregue */
+    background: #f4f4f4 url('../assets/background-grey.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-content {
+    max-width: 900px; /* Limita a largura para o texto não ficar cansativo */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido sutil para leitura */
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+#project-section-title {
+    color: var(--primary-red);
+}
+
+.project-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    text-align: justify; /* Texto justificado para ar mais acadêmico/sério */
+}
+
+/* Ajuste específico para o botão nesta seção */
+.btn-download {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* --- Responsividade Project Section (Mobile) --- */
+@media (max-width: 768px) {
+    .project-section {
+        padding: 60px 5%;
+    }
+
+    .project-content {
+        padding: 30px 20px;
+    }
+
+    .project-text {
+        font-size: 1rem;
+        text-align: left; /* No mobile, justificado pode criar buracos, left é melhor */
+    }
+}
+
         /* --- Footer --- */
         footer {
-            background-color: var(--text-dark);
+            background-color: var(--primary-red);
             color: var(--cream-bg);
             text-align: center;
             padding: 20px;

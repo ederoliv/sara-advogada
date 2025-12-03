@@ -239,6 +239,122 @@
     }
 }
 
+/* --- Experience Section --- */
+.experience {
+    padding: 80px 15%;
+    min-height: 100vh;
+    background-image: url('../assets/background-white.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Container dos Cards */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite quebrar linha se a tela for menor */
+}
+
+/* Estilo Individual do Card */
+.card {
+    background-color: #fff;
+    flex: 1; /* Faz os cards ocuparem largura igual */
+    min-width: 300px; /* Garante que não fiquem muito estreitos */
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary-red); /* Detalhe colorido no topo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Sobe um pouco ao passar o mouse */
+    box-shadow: 0 15px 40px rgba(198, 0, 20, 0.15);
+}
+
+/* Ícone dentro do Card */
+.icon-box {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.card ul {
+    list-style: none; /* Remove bolinhas padrão */
+    padding: 0;
+    width: 100%;
+}
+
+.card li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px; /* Espaço para o marcador personalizado */
+}
+
+/* Marcador personalizado (pequeno traço vermelho) antes de cada item */
+.card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 2px;
+    background-color: var(--primary-red);
+}
+
+/* --- Responsividade Experience (Mobile) --- */
+@media (max-width: 992px) {
+    .cards-container {
+        flex-direction: column; /* Empilha os cards */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Card ocupa largura total no mobile */
+        max-width: 500px;
+    }
+    
+    .experience {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+}
+
         /* --- Footer --- */
         footer {
             background-color: var(--text-dark);
